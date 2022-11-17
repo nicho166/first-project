@@ -8,16 +8,24 @@ body {
     background-color: #2d2d2d;
     color: whitesmoke;
     padding: 20px 100px;
-}
-
-.nav {
-    display: flex;
-    justify-content: space-between;
-    font-size: 20px;
+    display: grid;
+    grid-template-areas: 
+    "logo nav"
+    "content content";
+    grid-template-rows: 20% 80%;
+    grid-template-columns: 1fr 1fr;
 }
 
 .logo {
+    grid-area: logo;
     font-weight: 700;
+}
+
+.nav {
+    grid-area: nav;
+    display: flex;
+    font-size: 20px;
+    justify-content: flex-end;
 }
 
 ul {
@@ -32,6 +40,7 @@ li {
 }
 
 .header-content {
+    grid-area: content;
     display: flex;
     justify-content: space-between;
     align-items: center;
